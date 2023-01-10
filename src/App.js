@@ -36,13 +36,13 @@ function App() {
           <Route path="/meshume" element={<Meshume />}/>
           <Route path="/kontakt" element={<Kontakt />}/>
           <Route exact path="/vjersha/xhepi-im-i-vogel" element= {<XhepiImIVogel />} />
-          <Route exact path="/qengji-i-vogel" element= {<QengjiIVogel />} />
-          <Route exact path="/moj-bubrrec" element= {<MojBubrrec />} />
-          <Route exact path="/roza-rozina" element= {<RozaRozina />} />
-           <Route exact path="/ninulle-nina-nana" element= {<NinaNana />} />
-           <Route exact path="/pa-shikoni-duart-tona" element= {<PaShikoniDuartTona />} />
-           <Route exact path="/une-dhe-kominoshet" element= {<UneDheKominoshet />} />
-           <Route exact path="/dergimi-i-letres" element= {<DergimiILetres />} />
+          <Route exact path="/vjersha/qengji-i-vogel" element= {<QengjiIVogel />} />
+          <Route exact path="/vjersha/moj-bubrrec" element= {<MojBubrrec />} />
+          <Route exact path="/vjersha/roza-rozina" element= {<RozaRozina />} />
+           <Route exact path="/vjersha/ninulle-nina-nana" element= {<NinaNana />} />
+           <Route exact path="/vjersha/pa-shikoni-duart-tona" element= {<PaShikoniDuartTona />} />
+           <Route exact path="/vjersha/une-dhe-kominoshet" element= {<UneDheKominoshet />} />
+           <Route exact path="/vjersha/dergimi-i-letres" element= {<DergimiILetres />} />
         </Routes>
       </BrowserRouter>
       
