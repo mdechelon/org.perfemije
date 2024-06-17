@@ -3,7 +3,7 @@ import React from 'react';
 export default function MojBubrrec() {
   return <section id="vjersha" class="chap1">
   {/* <img src="../../images/veshkaushi.jpg" alt="Gabimet e Veshkaushit" title="Gabimet e Veshkaushit" class="round"/> */}
-      <h3>Moj bubrrec<br/></h3>
+      <h3>Moj bubrrec 1<br/></h3>
       <p>Teksti: Tefta Gjyli; Muzika: Leonard Deda</p>
                <p class="song">&ldquo;Moj bubrrec, moj bubrrec<br/>
               ti gjith ditën  ec e ec.<br/>
