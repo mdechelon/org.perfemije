@@ -5,7 +5,7 @@ import { renderRichText } from 'gatsby-source-contentful/rich-text'
 const Hero = ({ image, title, content }) => (
 <>
  <link href="https://fonts.googleapis.com/css?family=Henny%20Penny" rel="stylesheet"></link>
- <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css"></link>
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css"></link>
 
 <section id="hero" className="hero">
 
