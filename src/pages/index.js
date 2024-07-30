@@ -25,12 +25,12 @@ class RootIndex extends React.Component {
           content={author.shortBio}
         />
         <div style={{backgroundColor: "#fff"}}>
-        <Misioni
-          image={mission.image}
-          title={mission.title}
-          description={mission.description}
-        />
         <ArticlePreview posts={posts} />
+        <Misioni
+                  image={mission.image}
+                  title={mission.title}
+                  description={mission.description}
+                />
         </div>
       </Layout>
     )
