@@ -4,7 +4,6 @@ import get from 'lodash/get'
 
 import Seo from '../components/seo'
 import Layout from '../components/layout'
-import Hero from '../components/hero'
 import Kontakt from '../components/kontakt'
 
 class KontaktIndex extends React.Component {
