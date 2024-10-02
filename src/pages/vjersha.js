@@ -9,7 +9,6 @@ import ArticlePreview from '../components/article-preview'
 class VjershaIndex extends React.Component {
   render() {
     const posts = get(this, 'props.data.allContentfulBlogPost.nodes')
-
     return (
       <Layout location={this.props.location}>
         <Seo title="Blog" />

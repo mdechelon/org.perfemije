@@ -6,6 +6,7 @@ import { documentToPlainTextString } from '@contentful/rich-text-plain-text-rend
 import { BLOCKS } from '@contentful/rich-text-types'
 import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 import readingTime from 'reading-time'
+import moment from 'moment'
 
 import Seo from '../components/seo'
 import Layout from '../components/layout'
@@ -23,7 +24,11 @@ class BlogPostTemplate extends React.Component {
     )
     const plainTextBody = documentToPlainTextString(JSON.parse(post.body.raw))
     const { minutes: timeToRead } = readingTime(plainTextBody)
-    
+    //console.log(post.publishDate);
+    //console.log(moment(post.publishDate, 'MMMM Do, YYYY'));
+    const formattedDate = moment(post.publishDate, 'MMMM Do, YYYY').format('DD-MM-YYYY');
+    //console.log(formattedDate);
+
     const options = {
       renderNode: {
         [BLOCKS.EMBEDDED_ASSET]: (node) => {
@@ -53,8 +58,8 @@ class BlogPostTemplate extends React.Component {
         <div className={styles.container}>
           <span className={styles.meta}>
             {post.author?.name} &middot;{' '}
-            <time dateTime={post.rawDate}>{post.publishDate}</time> –{' '}
-            {timeToRead} minute lexim
+            <time dateTime={post.rawDate}>{formattedDate}</time> –{' '}
+            {timeToRead} min lexim
           </span>
           <div className={styles.article}>
             <div className={styles.body}>

@@ -13,10 +13,6 @@ class RootIndex extends React.Component {
     const [author] = get(this, 'props.data.allContentfulPerson.nodes')
     const [mission] = get(this, 'props.data.allContentfulSection.nodes')
 
-    console.log(posts)
-    console.log(author)
-    console.log(mission)
-
     return (
       <Layout location={this.props.location}>
         <Hero

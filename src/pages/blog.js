@@ -13,7 +13,7 @@ class BlogIndex extends React.Component {
 
     return (
       <Layout location={this.props.location}>
-        <Seo title="Blog" />
+        <Seo title="Vjersha per femije, vjersha per femije ne shqip, kenge per femije, kenge ne shqip, vjersha ne shqip, per femije" />
         <ArticlePreview posts={posts} />
       </Layout>
     )
