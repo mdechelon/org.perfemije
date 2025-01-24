@@ -4,9 +4,7 @@ const Container = ({ children, as = 'div' }) => {
   const Tag = as
 
   return (
-    <Tag
-
-    >
+    <Tag>
       {children}
     </Tag>
   )

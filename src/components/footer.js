@@ -12,11 +12,9 @@ const Footer = () => (
   <Container as="footer">
     <div>
     <ul>
-              <li><a href="#" target="_blank"><i class="fa fa-twitter-square"></i></a></li>
-                    <li><a href="#" target="_blank"><i class="fa fa-facebook-square"></i></a></li>
-                    <li><a href="#" target="_blank"><i class="fa fa-snapchat-square"></i></a></li>
-                    <li><a href="#" target="_blank"><i class="fa fa-pinterest-square"></i></a></li>
-                    <li><a href="#" target="_blank"><i class="fa fa-github-square"></i></a></li>
+              <li><a href="#" target="_blank"><i className="fa-brands fa-square-twitter"></i></a></li>
+                    <li><a href="#" target="_blank"><i className="fa-brands fa-square-facebook"></i></a></li>
+                    <li><a href="#" target="_blank"><i className="fa-brands fa-square-instagram"></i></a></li>
             </ul>
             <p>Lexoni <i>Vjersha Shqiptare per Femije</i> ne internet</p>
             <p>&copy; 2020 - {getDate()} Populli</p>

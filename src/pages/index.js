@@ -21,14 +21,12 @@ class RootIndex extends React.Component {
           title={author.name}
           content={author.shortBio}
         />
-        <div style={{backgroundColor: "#fff"}}>
-        <ArticlePreview posts={vjersha} linkName="/vjersha" esIndex="1" />
+        <div style={{backgroundColor: "#fff"}}>ó
         <ArticlePreview posts={posts} linkName="/kenge" esIndex="1"/>
-        <Misioni
-                  image={mission.image}
-                  title={mission.title}
-                  description={mission.description}
-                />
+
+        <ArticlePreview posts={vjersha} linkName="/vjersha" esIndex="1" />
+        <section id="mbeshtet" className="about">
+        </section>
         </div>
       </Layout>
     )
