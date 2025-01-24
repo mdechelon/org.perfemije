@@ -11,11 +11,11 @@ class Template extends React.Component {
     const { children } = this.props
 
     return (
-      <div className="App">
+      <div className="App" id="outer-container">
 
         <Seo />
         <Navigation />
-       <main>{children}</main>
+       <main id="page-wrap">{children}</main>
         <Footer />
       </div>
     )

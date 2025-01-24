@@ -9,6 +9,7 @@ import ArticlePreview from '../components/article-preview'
 
 class RootIndex extends React.Component {
   render() {
+    const vjersha = get(this, 'props.data.allContentfulVjersha.nodes')
     const posts = get(this, 'props.data.allContentfulBlogPost.nodes')
     const [author] = get(this, 'props.data.allContentfulPerson.nodes')
     const [mission] = get(this, 'props.data.allContentfulSection.nodes')
@@ -21,7 +22,8 @@ class RootIndex extends React.Component {
           content={author.shortBio}
         />
         <div style={{backgroundColor: "#fff"}}>
-        <ArticlePreview posts={posts} />
+        <ArticlePreview posts={vjersha} linkName="/vjersha" esIndex="1" />
+        <ArticlePreview posts={posts} linkName="/kenge" esIndex="1"/>
         <Misioni
                   image={mission.image}
                   title={mission.title}
@@ -37,7 +39,7 @@ export default RootIndex
 
 export const pageQuery = graphql`
   query HomeQuery {
-    allContentfulBlogPost(sort: { publishDate: DESC }) {
+    allContentfulVjersha(sort: { publishDate: DESC },skip:  0, limit:  8) {
       nodes {
         title
         slug
@@ -55,6 +57,25 @@ export const pageQuery = graphql`
          raw
         }
       }
+    }
+     allContentfulBlogPost(sort: { publishDate: DESC }, skip:  0, limit:  8)  {
+       nodes {
+          title
+          slug
+          publishDate(formatString: "MMMM Do, YYYY")
+          tags
+          heroImage {
+            gatsbyImage(
+              layout: FULL_WIDTH
+              placeholder: BLURRED
+              width: 424
+              height: 212
+            )
+          }
+          description {
+           raw
+          }
+       }
     }
     allContentfulPerson(
       filter: { contentful_id: { eq: "1HjrIWhJ1Lqrbrjg87Ea7a" } }

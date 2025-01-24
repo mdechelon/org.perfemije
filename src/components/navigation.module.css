@@ -6,7 +6,7 @@
   margin: 0 auto;
   padding: var(--space-2xl) var(--size-gutter);
 }
-
+/* old navigation
 .navigation {
   display: flex;
   list-style: none;
@@ -20,7 +20,7 @@
   align-items: center;
   flex-direction: row;
 }
-
+*/
 .navigationItem a {
   border-bottom: 1.5px solid transparent;
   color: currentColor;

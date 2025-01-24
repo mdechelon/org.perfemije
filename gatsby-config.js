@@ -5,7 +5,7 @@ require("dotenv").config({
 module.exports = {
   siteMetadata: {
     title: "Vjersha per femije ne shqip",
-    description: "Vjersha per femije ne shqip, kenge per femije, perralla shqip, flasim shqip",
+    description: "Vjersha per femije ne shqip, kenge per femije ne shqip, perralla per femije ne shqip, flasim shqip",
   },
   plugins: [
     "gatsby-transformer-sharp",

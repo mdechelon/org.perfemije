@@ -3,8 +3,9 @@
   display: flex;
   margin: 0 auto;
   max-width: var(--size-max-width);
-  min-height: 200px;
-  padding: 0 0 var(--size-gutter);
+  /*min-height: 200px;*/
+  /* padding: 0 0 var(--size-gutter); */
+  /*padding-top: 80px;*/
   position: relative;
 }
 
@@ -24,7 +25,7 @@
   max-width: 40rem;
   width: 85%;
   padding: var(--space-2xl) var(--size-gutter) 0;
-  position: absolute;
+  /*position: absolute;*/
 }
 
 .title {
@@ -43,18 +44,18 @@
 
 @media (min-width: 480px) {
   .details {
-    padding-top: var(--space-3xl);
+    /*padding-top: var(--space-3xl); */
   }
 }
 
 @media (min-width: 768px) {
   .hero {
-    padding-top: var(--size-gutter);
+     padding-top: var(--size-gutter);
   }
 
   .details {
     max-width: 44rem;
-    padding: var(--space-3xl) var(--size-gutter) 0;
+    /*padding: var(--space-3xl) var(--size-gutter) 0;*/
   }
 }
 
@@ -66,6 +67,6 @@
 
   .details {
     left: var(--size-gutter);
-    padding: var(--space-3xl) var(--size-gutter) 0 0;
+    /*padding: var(--space-3xl) var(--size-gutter) 0 0;*/
   }
 }

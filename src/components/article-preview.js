@@ -6,17 +6,18 @@ import { renderRichText } from 'gatsby-source-contentful/rich-text'
 import Tags from './tags'
 import * as styles from './article-preview.module.css'
 
-const ArticlePreview = ({ posts }) => {
+const ArticlePreview = ({ posts, linkName, esIndex }) => {
   if (!posts) return null
   if (!Array.isArray(posts)) return null
 
   return (
-    <section id="chapters" className="chapters">
+   <section id="chapters" className={linkName==='/vjersha'? "chapters": "about"}>
+   <div className={styles.h2}> <h2>{linkName.substring(1)} per femije </h2> {esIndex && <Link to={`${linkName}`} > (me shume)</Link> }</div>
       <ul className={styles.articleList}>
         {posts.map((post) => {
           return (
             <li key={post.slug}>
-              <Link to={`/blog/${post.slug}`} className={styles.link}>
+              <Link to={`${linkName}/${post.slug}`} className={styles.link}>
                 <GatsbyImage alt="" image={post.heroImage.gatsbyImage} />
                <h2 className={styles.title}> {post.title}</h2>
               </Link>

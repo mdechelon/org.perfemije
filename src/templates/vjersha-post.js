@@ -15,15 +15,16 @@ import Tags from '../components/tags'
 import * as styles from './blog-post.module.css'
 import * as styles2 from '../components/intro.module.css'
 
-class BlogPostTemplate extends React.Component {
+class VjershaPostTemplate extends React.Component {
   render() {
     console.log(this.props)
-    const post = get(this.props, 'data.contentfulBlogPost')
+    const post = get(this.props, 'data.contentfulVjersha')
     const previous = get(this.props, 'data.previous')
     const next = get(this.props, 'data.next')
-    const plainTextDescription = documentToPlainTextString(
-      post.description ? JSON.parse(post.description.raw) : ""
-    )
+//    const plainTextDescription = post.description ? documentToPlainTextString(
+//       JSON.parse(post.description.raw)
+//    ) : ""
+    const plainTextDescription = ""
     const plainTextBody = documentToPlainTextString(JSON.parse(post.body.raw))
     const { minutes: timeToRead } = readingTime(plainTextBody)
     //console.log(post.publishDate);
@@ -80,14 +81,14 @@ class BlogPostTemplate extends React.Component {
                 <ul className={styles.articleNavigation}>
                   {previous && (
                     <li>
-                      <Link to={`/kenge/${previous.slug}`} rel="prev">
+                      <Link to={`/vjersha/${previous.slug}`} rel="prev">
                         ← {previous.title}
                       </Link>
                     </li>
                   )}
                   {next && (
                     <li>
-                      <Link to={`/kenge/${next.slug}`} rel="next">
+                      <Link to={`/vjersha/${next.slug}`} rel="next">
                         {next.title} →
                       </Link>
                     </li>
@@ -102,15 +103,15 @@ class BlogPostTemplate extends React.Component {
   }
 }
 
-export default BlogPostTemplate
+export default VjershaPostTemplate
 
 export const pageQuery = graphql`
-  query BlogPostBySlug(
+  query VjershaBySlug(
     $slug: String!
     $previousPostSlug: String
     $nextPostSlug: String
   ) {
-    contentfulBlogPost(slug: { eq: $slug }) {
+    contentfulVjersha(slug: { eq: $slug }) {
       slug
       title
       author {
@@ -132,13 +133,13 @@ export const pageQuery = graphql`
       description {
         raw
       }
-      videoUrl
+
     }
-    previous: contentfulBlogPost(slug: { eq: $previousPostSlug }) {
+    previous: contentfulVjersha(slug: { eq: $previousPostSlug }) {
       slug
       title
     }
-    next: contentfulBlogPost(slug: { eq: $nextPostSlug }) {
+    next: contentfulVjersha(slug: { eq: $nextPostSlug }) {
       slug
       title
     }

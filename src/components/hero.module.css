@@ -3,8 +3,8 @@
   display: flex;
   margin: 0 auto;
   max-width: var(--size-max-width);
-  min-height: 200px;
-  padding: 0 0 var(--size-gutter);
+  /*min-height: 200px;*/
+   /* padding: 0 0 var(--size-gutter); */
   position: relative;
 }
 
@@ -30,7 +30,7 @@ width: '100%'
   max-width: 40rem;
   width: 85%;
   padding: var(--space-2xl) var(--size-gutter) 0;
-  position: absolute;
+  /*position: absolute;*/
 }
 
 .title {
@@ -55,7 +55,7 @@ width: '100%'
 
 @media (min-width: 768px) {
   .hero {
-    padding-top: var(--size-gutter);
+    padding-top: 0px;
   }
 
   .details {

@@ -43,7 +43,7 @@ hr{
 
 section{
   background-color: #fff;
-  padding: 125px 100px;
+  padding: 30px 100px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -100,7 +100,7 @@ header{
   color: #fff;
   justify-content: space-around;
 }
-
+/* old nav
 header nav{
   display: flex;
 }
@@ -116,6 +116,7 @@ header nav li:first-child{
 header nav li:last-child{
   margin-right: 0;
 }
+*/
 
 header h2{
   font-family: 'Open Sans', serif;
