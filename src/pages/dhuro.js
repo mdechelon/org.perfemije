@@ -4,31 +4,31 @@ import get from 'lodash/get'
 
 import Seo from '../components/seo'
 import Layout from '../components/layout'
-import Misioni from '../components/misioni'
+import Mbeshtet from '../components/mbeshtet'
 
-class DhuroIndex extends React.Component {
+class MbeshtetIndex extends React.Component {
   render() {
-   const [mission] = get(this, 'props.data.allContentfulSection.nodes')
+   const [mbeshtet] = get(this, 'props.data.allContentfulSection.nodes')
 
     return (
       <Layout location={this.props.location}>
-        <Seo title="Dhuroni per femije" />
-         <Misioni
-                  image={mission.image}
-                  title={mission.title}
-                  description={mission.description}
+        <Seo title={mbeshtet.title} />
+         <Mbeshtet
+                  image={mbeshtet.image}
+                  title={mbeshtet.title}
+                  description={mbeshtet.description}
                 />
       </Layout>
     )
   }
 }
 
-export default DhuroIndex
+export default MbeshtetIndex
 
 export const pageQuery = graphql`
   query BlogIndexQuery {
     allContentfulSection(
-                  filter: { contentful_id: { eq: "gWm2CxtzMO2dVB5WarYH3" } }
+                  filter: { contentful_id: { eq: "572D3Nee3mLCpkpCHZSKin" } }
                 ) {
           nodes {
             title
@@ -38,8 +38,8 @@ export const pageQuery = graphql`
             image{
               gatsbyImage(layout: FULL_WIDTH
                                       placeholder: BLURRED
-                                      width: 100
-                                      height: 400)
+                                      width: 50
+                                      height: 110)
             }
           }
         }

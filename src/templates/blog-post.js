@@ -58,19 +58,48 @@ class BlogPostTemplate extends React.Component {
           title={post.title}
           content={post.description}
         />
+
+        <div className={styles.article}>
+        {(previous || next) && (
+                                                 <nav>
+                                                   <ul className={styles.articleNavigation}>
+                                                     {previous && (
+                                                       <li>
+                                                         <Link to={`/kenge/${previous.slug}`} rel="prev">
+                                                           ← {previous.title}
+                                                         </Link>
+                                                       </li>
+                                                     )}
+                                                     {next && (
+                                                       <li>
+                                                         <Link to={`/kenge/${next.slug}`} rel="next">
+                                                           {next.title} →
+                                                         </Link>
+                                                       </li>
+                                                     )}
+                                                   </ul>
+                                                 </nav>
+                                               )}
+                                               </div>
+
         <div className={styles2.hero}>
+
  <div className={styles2.details}>
+
                                   <h1 className={styles2.title}>{post.title}</h1>
                  </div>
+
                  </div>
         <div className={styles.container}>
 
-          <span className={styles.meta}>
+
+          <div className={styles.meta}>
             {post.author?.name} &middot;{' '}
             <time dateTime={post.rawDate}>{formattedDate}</time> –{' '}
             {timeToRead} min lexim
-          </span>
+          </div>
           <div className={styles.article}>
+
             <div className={styles.body}>
               {post.body?.raw && renderRichText(post.body, options)}
             </div>

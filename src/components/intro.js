@@ -15,7 +15,8 @@ const Intro = ({ image, videoUrl, title, content }) => (
 //                  title="video"
 //                ></iframe></div>
                 <div className={styles.image}>
-                        <video width="100%" height="100%" src={videoUrl} controls  autostart autoplay controlslist="nodownload" /> </div>
+                        <video width="100%" height="100%" src={videoUrl} controls  autostart autoplay controlslist="nodownload" />
+                        </div>
                 )
                 }
                 {!videoUrl && image && (

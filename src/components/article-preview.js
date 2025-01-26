@@ -12,7 +12,7 @@ const ArticlePreview = ({ posts, linkName, esIndex }) => {
 
   return (
    <section id="chapters" className={linkName==='/vjersha'? "chapters": "about"}>
-   <div className={styles.h2}> <h2>{linkName ? linkName.substring(1): ""} per femije </h2> {esIndex && <Link to={`${linkName}`} > (me shume)</Link> }</div>
+   <div className={styles.h2}> <h2>{linkName ? linkName.substring(1): ""} per femije {esIndex ? "- Te Fundit" : "- Lista e plote" } </h2> {esIndex && <Link to={`${linkName}`} > shiko to gjitha →</Link> }</div>
       <ul className={styles.articleList}>
         {posts.map((post) => {
           return (

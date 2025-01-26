@@ -10,6 +10,8 @@ const Kontakt = ({ title, description }) => (
  <ul className="grid">
   <li class="large" alt=""><h3>{title}</h3>
            <p>{renderRichText(description)}</p></li>
+           <li className="small" alt="">
+           </li>
  </ul>
  </section>
 

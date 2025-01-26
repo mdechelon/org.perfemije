@@ -93,7 +93,7 @@ const Navigation = () => (
           Misioni
         </Link>
          <Link to="/dhuro/" >
-                  Dhuroni
+                  Mbeshtet
                 </Link>
 
             <Link to="/kontakt/"  >

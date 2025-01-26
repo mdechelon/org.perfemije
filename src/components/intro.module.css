@@ -54,7 +54,7 @@
   }
 
   .details {
-    max-width: 44rem;
+    max-width: 60rem;
     /*padding: var(--space-3xl) var(--size-gutter) 0;*/
   }
 }
