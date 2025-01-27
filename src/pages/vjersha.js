@@ -11,8 +11,10 @@ class VjershaIndex extends React.Component {
     const posts = get(this, 'props.data.allContentfulVjersha.nodes')
     return (
       <Layout location={this.props.location}>
-        <Seo title="Blog" />
+        <Seo title="Vjersha per femije" />
+        <div style={{paddingTop: "60px"}}>
         <ArticlePreview posts={posts} linkName="/vjersha" />
+        </div>
       </Layout>
     )
   }
