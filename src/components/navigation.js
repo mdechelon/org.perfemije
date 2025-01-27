@@ -8,11 +8,12 @@ import * as styles from './navigation.module.css'
 
 var styles1 =  {
   bmBurgerButton: {
- position: 'fixed',
+ position: 'relative',
+ //display: 'flex',
   width: '36px',
   height: '30px',
   //right: '36px',
-  top: '30px',
+  //top: '30px',
   // right: 0;
   float: 'right'
 
