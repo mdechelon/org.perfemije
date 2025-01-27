@@ -34,7 +34,7 @@ var styles1 =  {
   bmMenuWrap: {
     position: 'fixed',
     height: '100%',
-    width: '500px',
+    //width: '500px',
     right: '0px',
     top: '0px'
   },
@@ -50,7 +50,7 @@ var styles1 =  {
   //},
   bmItemList: {
     //color: '#b8b7ad',
-    padding: '5em',
+    padding: '3em',
     fontWeight: '500',
     font: 'normal 16px "Open Sans", sans-serif'
   },
@@ -61,7 +61,7 @@ var styles1 =  {
   },
   bmOverlay: {
   position:'fixed',
-  width: '500px',
+  //width: '500px',
     height: '100%',
     background: 'rgba(0, 0, 0, 0.7)',
     right: '0px',
