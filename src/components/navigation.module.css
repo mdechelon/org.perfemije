@@ -57,11 +57,12 @@
   }
 }
 
+/*
 @media (max-width: 480px) {
   .container {
     width: 85%;
   }
-}
+} */
 
 .logo {
   height: var(--size-logo);
