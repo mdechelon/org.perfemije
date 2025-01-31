@@ -11,7 +11,7 @@ const Mbeshtet = ({ image, title, description }) => (
   <li className="large" alt=""><h3>{title}</h3>
            {renderRichText(description)}</li>
          <li className="small" alt="">
-         <div style={{width: "200px", margin: "20%"}}> {image && (
+         <div style={{width: "100px", margin: "20%"}}> {image && (
                                                 <GatsbyImage  alt={title} image={image.gatsbyImage} />
                                                )}</div>
          </li>

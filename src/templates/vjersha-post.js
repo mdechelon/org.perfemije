@@ -66,11 +66,11 @@ class VjershaPostTemplate extends React.Component {
                  </div>
         <div className={styles.container}>
 
-          <span className={styles.meta}>
+          <div className={styles.meta}>
             {post.author?.name} &middot;{' '}
             <time dateTime={post.rawDate}>{formattedDate}</time> –{' '}
             {timeToRead} min lexim
-          </span>
+          </div>
           <div className={styles.article}>
             <div className={styles.body}>
               {post.body?.raw && renderRichText(post.body, options)}

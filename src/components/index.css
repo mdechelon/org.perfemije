@@ -76,10 +76,12 @@ section h3{
 }
 
 ul.grid{
-    width: 80%;
+    /*width: 80%; */
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    padding-left: var(--size-gutter);
+    max-width: var(--size-max-width);
 }
 
 p {
