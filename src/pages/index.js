@@ -11,6 +11,8 @@ class RootIndex extends React.Component {
   render() {
     const vjersha = get(this, 'props.data.allContentfulVjersha.nodes')
     const posts = get(this, 'props.data.allContentfulBlogPost.nodes')
+    const tetePosts = posts.slice(0, 8)
+    const teteVjersha = vjersha.slice(0, 8)
     const [author] = get(this, 'props.data.allContentfulPerson.nodes')
     const [mission] = get(this, 'props.data.allContentfulSection.nodes')
 
@@ -22,9 +24,9 @@ class RootIndex extends React.Component {
           content={author.shortBio}
         />
         <div style={{backgroundColor: "#fff"}}>
-        <ArticlePreview posts={posts} linkName="/kenge" esIndex="1"/>
+        <ArticlePreview posts={tetePosts} linkName="/kenge" esIndex="1"/>
 
-        <ArticlePreview posts={vjersha} linkName="/vjersha" esIndex="1" />
+        <ArticlePreview posts={teteVjersha} linkName="/vjersha" esIndex="1" />
         <section id="mbeshtet" className="about">
 
         </section>
@@ -38,7 +40,7 @@ export default RootIndex
 
 export const pageQuery = graphql`
   query HomeQuery {
-    allContentfulVjersha(sort: { publishDate: DESC },skip:  0, limit:  8) {
+    allContentfulVjersha(sort: { publishDate: DESC }) {
       nodes {
         title
         slug
@@ -57,7 +59,7 @@ export const pageQuery = graphql`
         }
       }
     }
-     allContentfulBlogPost(sort: { publishDate: DESC }, skip:  0, limit:  8)  {
+     allContentfulBlogPost(sort: { publishDate: DESC })  {
        nodes {
           title
           slug
