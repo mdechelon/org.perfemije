@@ -9,7 +9,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   const result = await graphql(
     `
       {
-        allContentfulVjersha {
+        allContentfulVjersha (sort: { publishDate: DESC }) {
           nodes {
             title
             slug
@@ -35,7 +35,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
       const resultBlog = await graphql(
         `
           {
-            allContentfulBlogPost {
+            allContentfulBlogPost(sort: { publishDate: DESC }){
               nodes {
                 title
                 slug
