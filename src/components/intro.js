@@ -1,6 +1,6 @@
 import React from 'react'
 import { GatsbyImage } from 'gatsby-plugin-image'
-import VideoThumbnail from 'react-video-thumbnail';
+//import VideoThumbnail from 'react-video-thumbnail';
 
 import * as styles from './intro.module.css'
 
