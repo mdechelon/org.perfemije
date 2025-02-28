@@ -10,7 +10,7 @@ const Hero = ({ image, title, content }) => (
 <section id="hero" className="hero">
 
   <div className="background-image">
-   {image && image.file && image.file.url && (      <video className="video" id="background_video" autoPlay loop muted>
+   {image && image.file && image.file.url && (      <video className="video" id="background_video" autoPlay loop muted playsInline>
                   <source type="video/mp4" src={image.file.url}/>
          </video> )}
   </div>
