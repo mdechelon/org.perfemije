@@ -17,7 +17,7 @@ import * as styles2 from '../components/intro.module.css'
 
 class BlogPostTemplate extends React.Component {
   render() {
-    console.log(this.props)
+    //console.log(this.props)
     const post = get(this.props, 'data.contentfulBlogPost')
     const previous = get(this.props, 'data.previous')
     const next = get(this.props, 'data.next')
@@ -63,13 +63,14 @@ class BlogPostTemplate extends React.Component {
         {(previous || next) && (
                                                  <nav>
                                                    <ul className={styles.articleNavigation}>
-                                                     {previous && (
-                                                       <li>
+
+                                                       <li> {previous && (
                                                          <Link to={`/kenge/${previous.slug}`} rel="prev">
                                                            ← {previous.title}
                                                          </Link>
+                                                         )}
                                                        </li>
-                                                     )}
+
                                                      {next && (
                                                        <li>
                                                          <Link to={`/kenge/${next.slug}`} rel="next">

@@ -32,10 +32,10 @@ const Seo = ({ description = '', lang = 'en', meta = [], title, image }) => {
           name: `description`,
           content: metaDescription,
         },
-        {
-          name: `image`,
-          content: image,
-        },
+//        {
+//          name: `image`,
+//          content: image,
+//        },
         {
           property: `og:title`,
           content: title,
@@ -48,10 +48,10 @@ const Seo = ({ description = '', lang = 'en', meta = [], title, image }) => {
           property: `og:type`,
           content: `website`,
         },
-        {
-          property: `og:image`,
-          content: image,
-        },
+//        {
+//          property: `og:image`,
+//          content: image,
+//        },
         {
           name: `twitter:card`,
           content: `summary_large_image`,
