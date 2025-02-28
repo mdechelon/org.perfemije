@@ -20,7 +20,7 @@ const Intro = ({ image, videoUrl, title, content }) => (
 //                ></iframe></div>
                 <div className={styles.image}>
                         <video width="100%" height="100%" src={videoUrl} controls  playsInline autostart="true" autoPlay controlsList="nodownload">
-                         <track default />
+                         <track kind="captions" srcLang="en" label="english_captions" />
                          </video>
                         </div>
                 )
