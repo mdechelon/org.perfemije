@@ -212,6 +212,16 @@ HERO
   background-color: #1A77C1;
 }
 
+
+.btnHero {
+    font-weight: 700;
+    padding: 16px 40px;
+    border: 2px rgba(255, 255, 255, .5);
+    background: #fff;
+    color: #555;
+}
+
+
 .hero .background-image:after{
   content: '';
   position:fixed;

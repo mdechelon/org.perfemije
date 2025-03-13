@@ -15,8 +15,11 @@ const Hero = ({ image, title, content }) => (
          </video> )}
   </div>
   <h1>{title}</h1>
+
+
   {content && (
               <h3>{renderRichText(content)}</h3>)}
+  <div><a className="btnHero" href="misioni/">Misioni</a> &nbsp;&nbsp;<a className="btnHero" href="dhuro/">Dhuro</a></div>
 </section>
 </>
 )
