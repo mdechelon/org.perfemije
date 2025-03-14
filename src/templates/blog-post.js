@@ -50,7 +50,7 @@ class BlogPostTemplate extends React.Component {
         <Seo
           title={post.title}
           description={plainTextDescription}
-          image={`http:${post.heroImage.resize.src}`}
+          image={`https:\/\/www.perfemije.org${post.heroImage.resize.src}`}
         />
         <Intro
           image={post.heroImage?.gatsbyImage}

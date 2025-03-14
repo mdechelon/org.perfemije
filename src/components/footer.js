@@ -17,7 +17,7 @@ const Footer = () => (
     <div>
     <p>Se shpejti na gjeni edhe ne rrjetet shoqerore</p>
     <ul>
-              <li><Link to="#" target="_blank"> <FontAwesomeIcon icon={faFacebookSquare} /></Link></li>
+              <li><Link to="https://www.facebook.com/profile.php?id=61573877501809" target="_blank"> <FontAwesomeIcon icon={faFacebookSquare} /></Link></li>
                     <li><a href="#" target="_blank"> <FontAwesomeIcon icon={faTwitterSquare} /></a></li>
                     <li><a href="#" target="_blank"> <FontAwesomeIcon icon={faInstagramSquare} /></a></li>
             </ul>
