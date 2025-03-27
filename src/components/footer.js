@@ -15,11 +15,9 @@ function getDate() {
 const Footer = () => (
   <Container as="footer">
     <div>
-    <p>Se shpejti na gjeni edhe ne rrjetet shoqerore</p>
     <ul>
-              <li><Link to="https://www.facebook.com/profile.php?id=61573877501809" target="_blank"> <FontAwesomeIcon icon={faFacebookSquare} /></Link></li>
-                    <li><a href="#" target="_blank"> <FontAwesomeIcon icon={faTwitterSquare} /></a></li>
-                    <li><a href="#" target="_blank"> <FontAwesomeIcon icon={faInstagramSquare} /></a></li>
+              <li><Link to="https://www.facebook.com/vjershadhekengeperfemije/" target="_blank"> <FontAwesomeIcon icon={faFacebookSquare} /></Link></li>
+                    <li><a href="https://www.instagram.com/vjershadhekengeperfemije" target="_blank"> <FontAwesomeIcon icon={faInstagramSquare} /></a></li>
             </ul>
             <p>Lexoni <i>Vjersha Shqiptare per Femije</i> ne internet</p>
             <p>&copy; 2020 - {getDate()} Populli</p>
