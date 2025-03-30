@@ -7,6 +7,7 @@ import { renderRichText } from 'gatsby-source-contentful/rich-text'
 const Mbeshtet = ({ image, title, description }) => (
 
  <section id="mbeshtet" className="about">
+ <div className="goside">
  <ul className="grid">
   <li className="large" alt=""><h3>{title}</h3>
            {renderRichText(description)}</li>
@@ -17,7 +18,7 @@ const Mbeshtet = ({ image, title, description }) => (
          </li>
  </ul>
 
-
+</div>
 
  </section>
 

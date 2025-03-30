@@ -59,7 +59,7 @@ class VjershaPostTemplate extends React.Component {
           title={post.title}
           content={post.description}
         />
-        <div className={styles2.hero}>
+        <div className={styles2.content}>
  <div className={styles2.details}>
                                   <h1 className={styles2.title}>{post.title}</h1>
                  </div>

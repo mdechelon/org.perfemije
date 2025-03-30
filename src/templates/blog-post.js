@@ -83,7 +83,7 @@ class BlogPostTemplate extends React.Component {
                                                )}
                                                </div>
 
-        <div className={styles2.hero}>
+        <div className={styles2.content}>
 
  <div className={styles2.details}>
 

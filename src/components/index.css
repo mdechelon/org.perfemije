@@ -43,10 +43,11 @@ hr{
 
 section{
   background-color: #fff;
-  padding: 30px 100px;
+  /*padding: 30px 100px;*/
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: var(--size-gutter);
 
 
 }
@@ -65,23 +66,42 @@ section h3{
 
 @media(max-width: 1000px){
   section{
-      padding:100px 50px;
+      /*padding:100px 50px;*/
   }
 }
 
 @media(max-width: 600px){
   section{
-      padding:80px 30px;
+      /* padding:80px 30px;*/
   }
 }
 
+.goside{
+ max-width: var(--size-max-width);
+ width: 100%
+ }
+
 ul.grid{
-    /*width: 80%; */
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    padding-left: var(--size-gutter);
+    padding-left: 0px;
     max-width: var(--size-max-width);
+    margin: 0 auto;
+
+}
+
+
+@media(min-width: 600px){
+    ul.grid{
+        width: 85%;
+    }
+}
+@media(max-width: 600px){
+    ul.grid{
+        width: 100%;
+
+    }
 }
 
 p {
@@ -144,6 +164,7 @@ ABOUT
 .about{
   background-color: #F7F7F7;
   padding-top: 60px;
+  padding-left: var(--size-gutter);
 
 }
 

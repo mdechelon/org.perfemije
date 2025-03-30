@@ -5,7 +5,19 @@
   max-width: var(--size-max-width);
   /*min-height: 200px;*/
   /* padding: 0 0 var(--size-gutter); */
-  /*padding-top: 80px;*/
+  padding-top: 80px;
+
+  position: relative;
+}
+
+.content {
+  align-items: flex-end;
+  display: flex;
+  margin: 0 auto;
+  max-width: var(--size-max-width);
+  /*min-height: 200px;*/
+  /* padding: 0 0 var(--size-gutter); */
+
   position: relative;
 }
 
@@ -50,7 +62,7 @@
 
 @media (min-width: 768px) {
   .hero {
-     padding-top: var(--size-gutter);
+     /*padding-top: var(--size-gutter); */
   }
 
   .details {

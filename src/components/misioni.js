@@ -7,7 +7,7 @@ import { renderRichText } from 'gatsby-source-contentful/rich-text'
 const Misioni = ({ image, title, description }) => (
 
  <section id="misioni" className="about">
-
+<div className="goside">
  <ul className="grid">
   <li className="large" alt=""><h3>{title}</h3>
            {renderRichText(description)}</li>
@@ -17,6 +17,7 @@ const Misioni = ({ image, title, description }) => (
                                                )}</div>
          </li>
  </ul>
+ </div>
 
 
 
