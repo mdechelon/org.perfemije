@@ -1,0 +1,3 @@
+Sitemap: https://www.perfemije.org/sitemap-index.xml
+User-agent: *
+Disallow:

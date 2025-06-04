@@ -48,7 +48,7 @@ class BlogPostTemplate extends React.Component {
     return (
       <Layout location={this.props.location}>
         <Seo
-          title={post.title + " - Vjersha per femije, vjersha per femije ne shqip, kenge per femije, kenge ne shqip, vjersha ne shqip, per femije" }
+          title={"Kenge per femijet e mi ne shqip |" + post.title + " | Kenge, vjersha, perralla, lorja per femije, vjersha per femije ne shqip" }
           description={plainTextDescription + plainTextBody}
           image={`https:\/\/www.perfemije.org${post.heroImage.resize.src}`}
         />
