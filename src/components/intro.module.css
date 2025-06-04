@@ -51,7 +51,7 @@
 .content {
   font-size: var(--text-lead);
   font-weight: var(--semibold);
-  margin: 0;
+
 }
 
 @media (min-width: 480px) {
