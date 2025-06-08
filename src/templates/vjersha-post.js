@@ -49,7 +49,7 @@ class VjershaPostTemplate extends React.Component {
     return (
       <Layout location={this.props.location}>
         <Seo
-          title={"Vjersha per femijet e mi ne shqip |" + post.title + " | Kenge, vjersha, perralla, lorja per femije, vjersha per femije ne shqip" }
+          title={"Vjersha per femijet e mi ne shqip | " + post.title + " | Kenge, vjersha, perralla, lorja per femije, vjersha per femije ne shqip" }
           description={plainTextDescription + plainTextBody}
           image={`https:\/\/www.perfemije.org${post.heroImage.resize.src}`}
         />
