@@ -80,7 +80,7 @@ module.exports = {
                       (edge) => {
 
                           return {
-                            path: `/kenge/${edge.node.path}`,
+                            path: `/kenge/${edge.node.path}/`,
                             updatedAt: edge.node.updatedAt
                           }
                       }
@@ -90,7 +90,7 @@ module.exports = {
                                     (edge) => {
 
                                         return {
-                                          path: `/vjersha/${edge.node.path}`,
+                                          path: `/vjersha/${edge.node.path}/`,
                                           updatedAt: edge.node.updatedAt
                                         }
                                     }
