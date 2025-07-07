@@ -95,7 +95,19 @@ module.exports = {
                                         }
                                     }
                                   );
-             return [...kenge, ...vjersha];
+              const otherPages = [{
+                    path: 'https://www.perfemije.org/',
+                    updatedAt: '2025-07-06T21:24:42.976Z'
+              },
+              {
+                                  path: 'https://www.perfemije.org/kenge/',
+                                  updatedAt: '2025-07-06T21:24:42.976Z'
+                            },
+                            {
+                                                path: 'https://www.perfemije.org/vjersha/',
+                                                updatedAt: '2025-07-06T21:24:42.976Z'
+                                          }];
+             return [...kenge, ...vjersha, ...otherPages];
            },
            serialize: ({ path, updatedAt  }) => {
                return {
