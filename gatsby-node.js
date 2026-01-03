@@ -3,6 +3,50 @@ const path = require('path')
 exports.createPages = async ({ graphql, actions, reporter }) => {
   const { createPage } = actions
 
+  // Define a template for artikuj post
+  const artikujPost = path.resolve('./src/templates/artikuj-post.js')
+
+  const resultArtikuj = await graphql(
+    `
+      {
+        allContentfulArtikuj (sort: { publishDate: DESC }) {
+          nodes {
+            title
+            slug
+          }
+        }
+      }
+    `
+  )
+
+  if (resultArtikuj.errors) {
+    reporter.panicOnBuild(
+      `There was an error loading your Contentful artikuj posts`,
+      resultArtikuj.errors
+    )
+    return
+  }
+
+  const artikujat = resultArtikuj.data.allContentfulArtikuj.nodes
+
+  if (artikujat.length > 0) {
+    artikujat.forEach((post, index) => {
+      const previousPostSlug = index === 0 ? null : artikujat[index - 1].slug
+      const nextPostSlug =
+        index === artikujat.length - 1 ? null : artikujat[index + 1].slug
+
+      createPage({
+        path: `/artikuj/${post.slug}/`,
+        component: artikujPost,
+        context: {
+          slug: post.slug,
+          previousPostSlug,
+          nextPostSlug,
+        },
+      })
+    })
+  }
+
   // Define a template for blog post
   const vjershaPost = path.resolve('./src/templates/vjersha-post.js')
 

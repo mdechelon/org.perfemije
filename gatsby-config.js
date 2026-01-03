@@ -67,13 +67,22 @@ module.exports = {
                         }
                       }
                   }
+               allContentfulArtikuj {
+                    edges {
+                        node {
+                          path: slug
+                          updatedAt
+                        }
+                      }
+                  }
 
              }
            `,
            resolveSiteUrl: () => "https://www.perfemije.org/",
            resolvePages: ({
              allContentfulBlogPost,
-             allContentfulVjersha
+             allContentfulVjersha,
+             allContentfulArtikuj
            }) => {
 
             const kenge = allContentfulBlogPost.edges.map(
@@ -95,6 +104,16 @@ module.exports = {
                                         }
                                     }
                                   );
+
+              const artikuj = allContentfulArtikuj.edges.map(
+                                    (edge) => {
+
+                                        return {
+                                          path: `/artikuj/${edge.node.path}/`,
+                                          updatedAt: edge.node.updatedAt
+                                        }
+                                    }
+                                  );
               const otherPages = [{
                     path: 'https://www.perfemije.org/',
                     updatedAt: '2025-07-06T21:24:42.976Z'
@@ -106,8 +125,12 @@ module.exports = {
                             {
                                                 path: 'https://www.perfemije.org/vjersha/',
                                                 updatedAt: '2025-07-06T21:24:42.976Z'
+                                          },
+                            {
+                                                path: 'https://www.perfemije.org/artikuj/',
+                                                updatedAt: '2025-07-06T21:24:42.976Z'
                                           }];
-             return [...kenge, ...vjersha, ...otherPages];
+             return [...kenge, ...vjersha, ...artikuj, ...otherPages];
            },
            serialize: ({ path, updatedAt  }) => {
                return {

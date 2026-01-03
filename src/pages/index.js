@@ -11,8 +11,10 @@ class RootIndex extends React.Component {
   render() {
     const vjersha = get(this, 'props.data.allContentfulVjersha.nodes')
     const posts = get(this, 'props.data.allContentfulBlogPost.nodes')
+    const artikuj = get(this, 'props.data.allContentfulArtikuj.nodes')
     const tetePosts = posts.slice(0, 8)
     const teteVjersha = vjersha.slice(0, 8)
+    const teteArtikuj = artikuj.slice(0, 8)
     const [author] = get(this, 'props.data.allContentfulPerson.nodes')
     const [mission] = get(this, 'props.data.allContentfulSection.nodes')
 
@@ -27,6 +29,9 @@ class RootIndex extends React.Component {
         <ArticlePreview posts={tetePosts} linkName="/kenge" esIndex="1"/>
 
         <ArticlePreview posts={teteVjersha} linkName="/vjersha" esIndex="1" />
+
+        <ArticlePreview posts={teteArtikuj} linkName="/artikuj" esIndex="1" />
+
         <section id="mbeshtet" className="about">
 
         </section>
@@ -77,6 +82,25 @@ export const pageQuery = graphql`
            raw
           }
        }
+    }
+    allContentfulArtikuj(sort: { publishDate: DESC }) {
+      nodes {
+        title
+        slug
+        publishDate(formatString: "MMMM Do, YYYY")
+        tags
+        heroImage {
+          gatsbyImage(
+            layout: FULL_WIDTH
+            placeholder: BLURRED
+            width: 424
+            height: 212
+          )
+        }
+        description {
+          raw
+        }
+      }
     }
     allContentfulPerson(
       filter: { contentful_id: { eq: "1HjrIWhJ1Lqrbrjg87Ea7a" } }

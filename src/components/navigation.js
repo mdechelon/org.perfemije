@@ -89,6 +89,9 @@ const Navigation = () => (
           <Link to="/vjersha/"  >
             Vjersha per femije
           </Link>
+          <Link to="/artikuj/"  >
+            Artikuj per femije
+          </Link>
 
         <Link to="/misioni/" >
           Misioni
