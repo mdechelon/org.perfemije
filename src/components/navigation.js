@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Link } from 'gatsby'
 import { slide as Menu } from 'react-burger-menu'
 
@@ -70,13 +70,80 @@ var styles1 =  {
 }
 
 
-const Navigation = () => (
+const Navigation = () => {
+  const [radioOn, setRadioOn] = useState(false)
+  const [audioRef] = useState(() => typeof window !== 'undefined' ? new Audio() : null)
+  const [currentTrack, setCurrentTrack] = useState(0)
+
+  const radioSources = [
+    'https://d3ii812fhgvnso.cloudfront.net/yljdhd.mp4',
+    'https://d3ii812fhgvnso.cloudfront.net/loyre.mp4',
+    'https://d3ii812fhgvnso.cloudfront.net/rydhg.mp4'
+  ]
+
+  const toggleRadio = () => {
+    if (!audioRef) return
+
+    if (!radioOn) {
+      // Turn radio ON
+      audioRef.src = radioSources[currentTrack]
+      audioRef.play().catch(err => console.error('Error playing audio:', err))
+      setRadioOn(true)
+      console.log('Radio started - Playing:', radioSources[currentTrack])
+    } else {
+      // Turn radio OFF
+      audioRef.pause()
+      audioRef.currentTime = 0
+      setRadioOn(false)
+      console.log('Radio stopped')
+    }
+  }
+
+  const handleTrackEnd = () => {
+    if (radioOn) {
+      // Move to next track
+      const nextTrack = (currentTrack + 1) % radioSources.length
+      setCurrentTrack(nextTrack)
+      audioRef.src = radioSources[nextTrack]
+      audioRef.play().catch(err => console.error('Error playing next track:', err))
+      console.log('Playing next track:', radioSources[nextTrack])
+    }
+  }
+
+  // Set up event listener for when track ends
+  React.useEffect(() => {
+    if (audioRef) {
+      audioRef.addEventListener('ended', handleTrackEnd)
+      return () => audioRef.removeEventListener('ended', handleTrackEnd)
+    }
+  }, [radioOn, currentTrack, audioRef])
+
+  return (
 <header>
   <nav role="navigation" className={styles.container} aria-label="Main">
     <Link to="/" className={styles.logoLink}>
       <span className={styles.logo} />
       <span className={styles.navigationItem}> Per Femije</span>
     </Link>
+
+    <button
+      onClick={toggleRadio}
+      className={styles.radioButton}
+      aria-label={radioOn ? 'Turn off music radio' : 'Turn on music radio'}
+      style={{
+        padding: '0.5em 1em',
+        marginRight: '1em',
+        backgroundColor: radioOn ? '#a90000' : '#bdc3c7',
+        color: '#fff',
+        border: 'none',
+        borderRadius: '4px',
+        cursor: 'pointer',
+        fontWeight: 'bold',
+        textTransform: 'uppercase'
+      }}
+    >
+      {radioOn ? '🎵 Radio ON' : '🎵 Radio OFF'}
+    </button>
 
      <Menu styles={styles1} right pageWrapId={ "page-wrap" } outerContainerId={ "outer-container" } >
           <Link to="/"  >
@@ -108,6 +175,7 @@ const Navigation = () => (
   </nav>
 
 </header>
-)
+  )
+}
 
 export default Navigation

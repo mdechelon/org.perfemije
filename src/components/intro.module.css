@@ -31,6 +31,24 @@
   width: 100%;
 }
 
+.youtubeFrame {
+  position: relative;
+}
+
+.youtubeFrame iframe {
+  display: block;
+}
+
+.youtubeBottomMask {
+  background: #000;
+  bottom: 0;
+  height: 64px;
+  left: 0;
+  position: absolute;
+  width: 100%;
+  z-index: 1;
+}
+
 .details {
   background: var(--background);
   left: 0;
